@@ -12,14 +12,16 @@
 #include <photon/PhotonUtils.h>
 
 namespace nerds {
-    class Vision : public frc2::SubsystemBase {
+
+class Vision : public frc2::SubsystemBase {
     public:
         Vision() noexcept;
     private:
         std::array<VisionCamera, 1> cameras = {
             VisionCamera{}
         };
-    };
+};
+
 }
 
 #endif // VISION_SUBSYSTEM_H

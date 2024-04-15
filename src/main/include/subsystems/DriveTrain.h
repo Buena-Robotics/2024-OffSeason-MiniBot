@@ -15,7 +15,8 @@
 #include <frc/simulation/DifferentialDrivetrainSim.h>
 
 namespace nerds {
-    class DriveTrain : public frc2::SubsystemBase {
+
+class DriveTrain : public frc2::SubsystemBase {
     public:
         DriveTrain() noexcept;
         void Periodic() override;
@@ -39,7 +40,8 @@ namespace nerds {
         frc::DifferentialDrivePoseEstimator pose_estimator{kinematics, frc::Rotation2d{}, 0_m, 0_m, frc::Pose2d{}, state_std_devs, vision_measurement_std_devs};
         frc::DifferentialDrive differential_drive{left_motor, right_motor};
         frc::sim::DifferentialDrivetrainSim differential_drive_sim{drive_motor, gear_ratio, center_inertia, mass, wheel_radius, track_width};
-    };
+};
+
 }
 
 
